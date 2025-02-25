@@ -17,8 +17,8 @@ header {
 }
 
 header .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 header .logo img {
@@ -29,6 +29,8 @@ header .logo img {
 
 header h1 {
     margin: 0;
+    font-size: 1.8em;
+    color: #ECF0F1;
 }
 
 nav {
@@ -49,17 +51,23 @@ nav .nav-links {
     display: flex;
 }
 
-nav .nav-links li {
-    margin-right: 20px;
-}
-
 nav .nav-links li a {
     color: #ECF0F1;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #E74C3C;
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
     nav .hamburger-menu {
         display: block; /* Show hamburger menu on mobile */
     }
@@ -73,7 +81,7 @@ nav .nav-links li a {
         padding: 10px;
         border-radius: 5px;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         text-align: center;
     }
 
@@ -83,6 +91,10 @@ nav .nav-links li a {
 
     nav .nav-links li {
         margin: 10px 0;
+    }
+
+    nav .nav-links li a {
+        font-size: 1.5em; /* Larger font on mobile */
     }
 }
 
@@ -107,8 +119,8 @@ main {
 #welcome {
     text-align: center;
     font-family: 'Georgia', serif;
-    font-size: 2em;
-    color: rgba(255, 182, 193, 0.3);
+    font-size: 1em;
+    color: rgba(187, 214, 183, 0.934);
     margin-top: 50px;
 }
 
@@ -125,6 +137,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .service {
@@ -162,9 +175,9 @@ main {
 
 .service ul li {
     padding: 5px 0;
-    border-bottom: 1px solid #ECF0F1;
 }
 
+/* Fee Structure Section */
 .fee-structure {
     display: flex;
     justify-content: center;
@@ -183,6 +196,7 @@ main {
     margin: 0;
 }
 
+/* Footer */
 footer {
     background-color: #34495E;
     text-align: center;
@@ -191,4 +205,12 @@ footer {
 
 footer #contact {
     margin-bottom: 10px;
+}
+
+footer p {
+    color: #ECF0F1;
+}
+
+footer p:hover {
+    color: #E74C3C;
 }
