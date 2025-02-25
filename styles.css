@@ -6,12 +6,14 @@ body {
     padding: 0;
 }
 
+/* Base styles for the header */
 header {
     background-color: #34495E;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 header .logo {
@@ -29,19 +31,59 @@ header h1 {
     margin: 0;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: #ECF0F1;
+    cursor: pointer;
+}
+
+nav .nav-links {
     list-style: none;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
+nav .nav-links li {
     margin-right: 20px;
 }
 
-nav ul li a {
+nav .nav-links li a {
     color: #ECF0F1;
     text-decoration: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    nav .hamburger-menu {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    nav .nav-links {
+        display: none; /* Hide the links by default */
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #34495E;
+        padding: 10px;
+        border-radius: 5px;
+        flex-direction: column;
+        width: 50%;
+        text-align: center;
+    }
+
+    nav .nav-links.show {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
 }
 
 main {
