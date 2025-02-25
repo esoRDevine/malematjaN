@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #34495E;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+}
+
+header .logo img {
+    width: 100%;
+    height: auto;
+    filter: invert(1); /* Make the logo white */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #E74C3C;
+    background-color: #ECF0F1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#welcome {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2em;
+    color: rgba(255, 182, 193, 0.3);
+    margin-top: 50px;
+}
+
+#welcome h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#welcome p {
+    font-size: 1.5em;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service {
+    background-color: #34495E;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid rgba(255, 182, 193, 0.3); /* Lavender rose color with 30% opacity */
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ECF0F1;
+}
+
+.service ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.service.active ul {
+    display: block;
+}
+
+.service ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ECF0F1;
+}
+
+.fee-structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 5px solid rgba(255, 182, 193, 0.3); /* Lavender rose color with 30% opacity */
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fee-structure ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    background-color: #34495E;
+    text-align: center;
+    padding: 20px;
+}
+
+footer #contact {
+    margin-bottom: 10px;
+}
